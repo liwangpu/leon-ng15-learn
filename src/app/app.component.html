@@ -1,0 +1,13 @@
+<div class="navigation">
+  <div class="navigation__header">
+    <p class="navigation__title">目录</p>
+  </div>
+  <div class="navigation__content">
+    <div class="navbar" *ngFor="let nv of navBars" [routerLink]="[nv.link]" routerLinkActive="navbar--actived">
+      <p class="navbar__title">{{nv.title}}</p>
+    </div>
+  </div>
+</div>
+<div class="page">
+  <router-outlet></router-outlet>
+</div>
