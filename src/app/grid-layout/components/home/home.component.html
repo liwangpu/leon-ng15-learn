@@ -1,0 +1,3 @@
+<div class="container">
+  <div *ngFor="let bx of boxs;let i=index" class="box" [class]="'box'+ (i+1)" [style.backgroundColor]="bx.bgColor">{{bx.title}}</div>
+</div>

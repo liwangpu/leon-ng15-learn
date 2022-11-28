@@ -1,11 +1,13 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { BlankComponent } from './components/blank/blank.component';
 import { HomeComponent } from './components/home/home.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
-  { path: 'blank', component: BlankComponent },
+  {
+    path: 'grid-layout',
+    loadChildren: () => import('./grid-layout/grid-layout.module').then(m => m.GridLayoutModule)
+  },
   { path: '**', redirectTo: 'home' }
 ];
 

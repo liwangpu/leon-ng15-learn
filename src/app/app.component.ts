@@ -26,13 +26,13 @@ export class AppComponent {
     // }
 
     this.navBars = [
+      // {
+      //   title: 'Home',
+      //   link: '/home'
+      // },
       {
-        title: 'Home',
-        link: '/home'
-      },
-      {
-        title: 'Blank',
-        link: '/blank'
+        title: 'Grid布局',
+        link: '/grid-layout/home'
       },
     ];
   }
