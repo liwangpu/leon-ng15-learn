@@ -12,6 +12,7 @@
   background-color: #1E1E28;
   overflow-x: hidden;
   overflow-y: auto;
+  user-select: none;
 
   &__title {
     flex: 1;
