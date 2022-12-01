@@ -16,7 +16,7 @@ export class HomeComponent {
   public readonly boxs: Array<IBox>;
   public constructor(private colorPallet: ColorPalletService) {
     this.boxs = [];
-    const count = 3;
+    const count = 6;
     for (let i = 0; i < count; i++) {
       let bx: IBox = {
         title: `${i + 1}`,

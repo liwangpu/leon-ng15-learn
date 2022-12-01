@@ -6,7 +6,13 @@
 
 .container {
   display: grid;
-  grid-template-columns: repeat(4, 25%);
+  grid-template-columns: repeat(4, 1fr);
+  // grid-template-rows: auto;
+  grid-auto-rows: minmax(min-content, max-content);
+  padding: 10px;
+  grid-column-gap: 20px;
+  justify-items: end;
+  align-items: start;
   // grid-template-rows: repeat(3, 20%);
   // justify-content: center;
   // align-content: center;
@@ -19,10 +25,11 @@
 
 .box {
   width: 50px;
-  // height: 50px;
+  height: 50px;
+  // height: 100%;
 
   &.box2 {
-    // height: 150px;
+    height: 150px;
     // z-index: 9;
   }
 }
