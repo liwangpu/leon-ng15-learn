@@ -12,7 +12,7 @@
   padding: 10px;
   grid-column-gap: 20px;
   justify-items: end;
-  align-items: start;
+  align-items: center;
   // grid-template-rows: repeat(3, 20%);
   // justify-content: center;
   // align-content: center;
@@ -31,5 +31,36 @@
   &.box2 {
     height: 150px;
     // z-index: 9;
+  }
+}
+
+
+.container-a {
+  display: grid;
+  // width: 100%;
+  width: 500px;
+  height: 500px;
+  border: 1px solid #cacdd1;
+  grid-template-columns: repeat(4, 1fr);
+  justify-content: start;
+  // align-items: start;
+  align-items: start;
+  align-content: start;
+}
+
+.bx {
+  background-color: orange;
+  height: 60px;
+
+  &.one {
+    // width: 50%;
+    height: 100px;
+    background-color: pink;
+    grid-column-start: span 3;
+  }
+
+  &.two {
+    background-color: green;
+    grid-column-start: span 4;
   }
 }
