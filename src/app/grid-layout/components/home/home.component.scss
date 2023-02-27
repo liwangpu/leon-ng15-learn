@@ -41,7 +41,7 @@
   width: 500px;
   height: 500px;
   border: 1px solid #cacdd1;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(24, 1fr);
   justify-content: start;
   // align-items: start;
   align-items: start;
@@ -50,7 +50,8 @@
 
 .bx {
   background-color: orange;
-  height: 60px;
+  // height: 60px;
+  grid-column: span 24;
 
   &.one {
     // width: 50%;

@@ -1,10 +1,8 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
-import { faker } from '@faker-js/faker';
+import { ChangeDetectionStrategy, Component, ElementRef } from '@angular/core';
 
-interface INavBar {
-  title: string;
-  link: string;
-}
+import { customAlphabet } from 'nanoid/non-secure';
+
+const nanoid = customAlphabet('0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ', 8);
 
 @Component({
   selector: 'app-root',
@@ -14,26 +12,14 @@ interface INavBar {
 })
 export class AppComponent {
 
-  public readonly navBars: Array<INavBar>;
-  public constructor() {
-    // this.navBars = [];
-    // for (let i = 0; i < 10; i++) {
-    //   let nav: INavBar = {
-    //     title: `${i}`,
-    //     link: 'aaa'
-    //   };
-    //   this.navBars.push(nav);
-    // }
+  items: Array<string> = [];
+  public constructor(protected el: ElementRef) {
+    for (let idx = 0; idx < 5; idx++) {
+      this.items.push(`${idx}`);
+    }
+  }
 
-    this.navBars = [
-      // {
-      //   title: 'Home',
-      //   link: '/home'
-      // },
-      {
-        title: 'Grid布局',
-        link: '/grid-layout/home'
-      },
-    ];
+  test(): void {
+    console.log(`el:`, this.el.nativeElement);
   }
 }
