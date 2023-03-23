@@ -21,10 +21,10 @@ export class AppComponent {
   // }
 
   public ngAfterViewInit() {
-    console.log(`dropZone:`, this.dropZone);
+    // console.log(`dropZone:`, this.dropZone);
 
-    this.dropZone.nativeElement.addEventListener('dragover', (e) => {
-      console.log(`ondragover:`);
-    });
+    // this.dropZone.nativeElement.addEventListener('dragover', (e) => {
+    //   console.log(`ondragover:`);
+    // });
   }
 }
